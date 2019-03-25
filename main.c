@@ -11,6 +11,7 @@ int main()
     return 0;
 }
 
+
 void creerPopulation(int taille){
     int i; int j;
     zombie *nouveau = malloc(sizeof(zombie))
