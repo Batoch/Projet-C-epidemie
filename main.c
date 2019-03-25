@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "zombie.h"
 
 int main()
 {
@@ -15,7 +16,7 @@ void creerPopulation(int taille){
     zombie *nouveau = malloc(sizeof(zombie))
     for(i=0, i<taille, i++){
         for(j=0, j<taille, j++){
-            nouveau =
+            nouveau =;
         }
     }
 }

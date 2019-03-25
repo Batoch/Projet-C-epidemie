@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "D:/Documents/Documents/Cours/Algo prog/Algo prog 2/Projet/Projet C epidemie/main.c" "D:/Documents/Documents/Cours/Algo prog/Algo prog 2/Projet/Projet C epidemie/cmake-build-debug/CMakeFiles/Projet_C_epidemie.dir/main.c.obj"
-  "D:/Documents/Documents/Cours/Algo prog/Algo prog 2/Projet/Projet C epidemie/zombie.c" "D:/Documents/Documents/Cours/Algo prog/Algo prog 2/Projet/Projet C epidemie/cmake-build-debug/CMakeFiles/Projet_C_epidemie.dir/zombie.c.obj"
+  "D:/Documents/Documents/Cours/Algo prog/Algo prog 2/Projet/Projet-C-epidemie/main.c" "D:/Documents/Documents/Cours/Algo prog/Algo prog 2/Projet/Projet-C-epidemie/cmake-build-debug/CMakeFiles/Projet_C_epidemie.dir/main.c.obj"
+  "D:/Documents/Documents/Cours/Algo prog/Algo prog 2/Projet/Projet-C-epidemie/zombie.c" "D:/Documents/Documents/Cours/Algo prog/Algo prog 2/Projet/Projet-C-epidemie/cmake-build-debug/CMakeFiles/Projet_C_epidemie.dir/zombie.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
