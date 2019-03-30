@@ -4,9 +4,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+enum eType {sain, immunise, malade, mort};
+
 typedef struct _cell 
 {
-	int	val; 
+	int	val;
+	int poids;
+	enum eType etat;
 	struct	_cell* suivant;
 } cell;
 
