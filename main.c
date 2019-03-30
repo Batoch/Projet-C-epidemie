@@ -7,13 +7,13 @@
 int main()
 {
     printf("Hello world123!\n");
-//cvbknfcb
+
     int taille; taille = 10;
-    creerGraph(taille);
 
     Graphe populationMatrice;
     creerGraph(taille);
-    lireGraphe(&populationMatrice, "graphe.txt");
+    // lireGraphe(&populationMatrice, "C:\\Users\\makhl\\Desktop\\testClion\\cmake-build-debug\\graph.txt");
+    lireGraphe(&populationMatrice, "C:\\Users\\makhl\\Desktop\\testClion\\cmake-build-debug\\graph.txt");
 
     // Toute la population est initialemnt saine
     // On infecte une personne au hasard
@@ -21,9 +21,9 @@ int main()
     printf("parametres d'infection:\nchances d'infection: ");
     float plambda; float pbeta; float pgamma;
     scanf("%d",&plambda);
-    printf("\ndangerosite de l'infection: ");
+    printf("dangerosite de l'infection: ");
     scanf("%d",&pbeta);
-    printf("\nprobabilite d'immunisation: ");
+    printf("probabilite d'immunisation: ");
     scanf("%d",&pgamma);
     //void infection(plambda, pbeta, pgamma);
 
