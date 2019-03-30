@@ -8,12 +8,13 @@
 void creerGraph(int taille){
     FILE *fp;
     fp = fopen("graph.txt", "w");
-    fputs(taille*taille, fp);
+    fputs(taille*taille, fp);                                          //nombre de sommets
+    fputs(2*taille*taille-2*(taille-1),fp);                            //nombre d'arcs
     for (int i = 1; i <= taille; ++i) {                                //i represente la i eme personne du graph
         int voisin[i-taille, i+1, i+taille, i-1];                      //indice du voisin: haut, droite, bas, gauche
 
         if(i<taille){
-            voisin[0]=0;                                               //Si la ieme personne fait parti de la premiere ligne, alors elle n'a pas de voisin en haut
+            voisin[0]=0;                                                //Si la ieme personne fait parti de la premiere ligne, alors elle n'a pas de voisin en haut
         }
         if(i>taille*taille-taille){                                     //Si la ieme personne est sur la derniere ligne
             voisin[2]=0;
