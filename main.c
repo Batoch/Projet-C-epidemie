@@ -12,12 +12,3 @@ int main()
 }
 
 
-void creerPopulation(int taille){
-    int i; int j;
-    zombie *nouveau = malloc(sizeof(zombie))
-    for(i=0, i<taille, i++){
-        for(j=0, j<taille, j++){
-            nouveau =;
-        }
-    }
-}

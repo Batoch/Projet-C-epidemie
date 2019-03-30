@@ -76,6 +76,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/Documents/Documents/Cours/Algo prog/Algo prog 2/Projet/Projet-C-epidemie/CreerGraph.c">
+			<Option target="Projet_C_epidemie"/>
+		</Unit>
+		<Unit filename="D:/Documents/Documents/Cours/Algo prog/Algo prog 2/Projet/Projet-C-epidemie/CreerGraph.h">
+			<Option target="Projet_C_epidemie"/>
+		</Unit>
 		<Unit filename="D:/Documents/Documents/Cours/Algo prog/Algo prog 2/Projet/Projet-C-epidemie/main.c">
 			<Option target="Projet_C_epidemie"/>
 		</Unit>

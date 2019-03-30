@@ -122,6 +122,33 @@ Projet_C_epidemie/fast:
 	$(MAKE) -f CMakeFiles\Projet_C_epidemie.dir\build.make CMakeFiles/Projet_C_epidemie.dir/build
 .PHONY : Projet_C_epidemie/fast
 
+CreerGraph.obj: CreerGraph.c.obj
+
+.PHONY : CreerGraph.obj
+
+# target to build an object file
+CreerGraph.c.obj:
+	$(MAKE) -f CMakeFiles\Projet_C_epidemie.dir\build.make CMakeFiles/Projet_C_epidemie.dir/CreerGraph.c.obj
+.PHONY : CreerGraph.c.obj
+
+CreerGraph.i: CreerGraph.c.i
+
+.PHONY : CreerGraph.i
+
+# target to preprocess a source file
+CreerGraph.c.i:
+	$(MAKE) -f CMakeFiles\Projet_C_epidemie.dir\build.make CMakeFiles/Projet_C_epidemie.dir/CreerGraph.c.i
+.PHONY : CreerGraph.c.i
+
+CreerGraph.s: CreerGraph.c.s
+
+.PHONY : CreerGraph.s
+
+# target to generate assembly for a file
+CreerGraph.c.s:
+	$(MAKE) -f CMakeFiles\Projet_C_epidemie.dir\build.make CMakeFiles/Projet_C_epidemie.dir/CreerGraph.c.s
+.PHONY : CreerGraph.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -185,6 +212,9 @@ help:
 	@echo ... Projet_C_epidemie
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... CreerGraph.obj
+	@echo ... CreerGraph.i
+	@echo ... CreerGraph.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
