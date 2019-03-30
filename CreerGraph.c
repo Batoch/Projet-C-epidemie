@@ -8,10 +8,11 @@
 void creerGraph(int taille){
     FILE *fp;
     fp = fopen("graph.txt", "w");
-    fputs(taille*taille, fp);                                          //nombre de sommets
-    fputs(2*taille*taille-2*(taille-1),fp);                            //nombre d'arcs
+    fputs("test",fp);
+    fputs((const char *) (taille * taille), fp);                                          //nombre de sommets
+    fputs((const char *) (2 * taille * taille - 2 * (taille - 1)), fp);                            //nombre d'arcs
     for (int i = 1; i <= taille; ++i) {                                //i represente la i eme personne du graph
-        int voisin[i-taille, i+1, i+taille, i-1];                      //indice du voisin: haut, droite, bas, gauche
+        int voisin[4] = {i-taille, i+1, i+taille, i-1};                      //indice du voisin: haut, droite, bas, gauche
 
         if(i<taille){
             voisin[0]=0;                                                //Si la ieme personne fait parti de la premiere ligne, alors elle n'a pas de voisin en haut
@@ -26,8 +27,9 @@ void creerGraph(int taille){
             voisin[3]=0;
         }
         fputs("\n", fp);
-        fputs(voisin, fp);
+        fputs((const char *) voisin, fp);
     }
+    fclose(fp);
     return 0;
 
 }

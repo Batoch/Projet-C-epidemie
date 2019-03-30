@@ -6,9 +6,9 @@
 int main()
 {
     printf("Hello world123!\n");
-    enum eType {sain, immunise, malade, mort};
+    //enum eType {sain, immunise, malade, mort};
 
-    creerGraph();
+    creerGraph(10);
 
     return 0;
 }
