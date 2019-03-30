@@ -8,4 +8,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void creerGraph(int taille);
+
 #endif //PROJET_C_EPIDEMIE_CREERGRAPH_H
