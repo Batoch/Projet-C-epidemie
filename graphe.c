@@ -61,31 +61,6 @@ void infection(int taille, enum eType* listeEtats){
 	listeEtats[index] = malade;
 }
 
-void afficherMatrice(enum eType* listeEtats, int taille){
-    for (int i=0; i< taille; i++){
-        for (int j=0; j<taille; j++){
-            switch(listeEtats[taille*i+j]) {
-                case sain:
-                    printf(".");
-                    break;
-                case malade:
-                    printf("*");
-                    break;
-                case immunise:
-                    printf("o");
-                    break;
-                case mort:
-                    printf("x");
-                    break;
-                default:
-                    printf("?");
-                    break;
-            }
-        }
-        printf("\n");
-    }
-    printf("\n");
-}
 
 void forward(Graphe* populationMatrice, enum eType* listeEtats, int taille, float plambda, float pbeta, float pgamma){
     cell* nouveau = malloc(sizeof(cell*));
