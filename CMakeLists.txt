@@ -7,5 +7,4 @@ include_directories(.)
 
 add_executable(Projet_C_epidemie
         main.c
-        zombie.c
-        zombie.h CreerGraph.c CreerGraph.h)
+        CreerGraph.c CreerGraph.h graphe.c graphe.h pFile.c pFile.h)

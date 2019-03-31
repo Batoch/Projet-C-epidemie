@@ -1,6 +1,10 @@
-#include "graph.h"
+#include "graphe.h"
 
-void lireGraph(Graphe* G, const char* grapheFileName)
+void test(){
+	printf("ca marche...");
+}
+
+void lireGraphe(Graphe* G, const char* grapheFileName)
 {
 	FILE *fp;
 	fp = fopen(grapheFileName, "r");
@@ -51,3 +55,34 @@ void affichage_graphe(Graphe* G)
 }
 
 
+void infection(float plambda, float pbeta, float pgamma, int taille){
+	srand(time(NULL)); // initialisation de rand
+	int index = rand()%(taille*taille); // choisir un malade au hasard
+
+
+}
+
+void afficherMatrice(enum eType* listeEtats, int taille){
+    for (int i=0; i< taille; i++){
+        for (int j=0; j<taille; j++){
+            switch(listeEtats[i+j]) {
+                case sain:
+                    printf(".");
+                    break;
+                case malade:
+                    printf("*");
+                    break;
+                case immunise:
+                    printf("o");
+                    break;
+                case mort:
+                    printf("x");
+                    break;
+                default:
+                    printf("?");
+                    break;
+            }
+        }
+        printf("\n");
+    }
+}

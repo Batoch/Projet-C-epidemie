@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "zombie.h"
 #include "CreerGraph.h"
 #include "graphe.h"
+#include "pFile.h"
+
+#define MAX_ETATS 1000
 
 int main()
 {
@@ -16,18 +18,23 @@ int main()
     lireGraphe(&populationMatrice, "C:\\Users\\makhl\\Desktop\\testClion\\cmake-build-debug\\graph.txt");
 
     // Toute la population est initialemnt saine
-    // On infecte une personne au hasard
-    printf("//******** INFECTIONATOR V2.0 ********\\\\\n\n");
-    printf("parametres d'infection:\nchances d'infection: ");
+    enum eType listeEtat[MAX_ETATS]; // nous n'avons pas compris pourquoi mais on ne peut pas mettre de variable en paramètre de taille du tableau
+    for (int i=0; i<taille*taille; i++){
+        listeEtat[i] = sain;
+    }
+
+    // On infecte une cell au hasard
+    printf("//******** INFECTIONATOR V2.0 ********\\\\\n\n");/*
+    printf("-={parametres d'infection}=-\nchances d'infection: ");
     float plambda; float pbeta; float pgamma;
-    scanf("%d",&plambda);
+    scanf("%f",&plambda);
     printf("dangerosite de l'infection: ");
-    scanf("%d",&pbeta);
+    scanf("%f",&pbeta);
     printf("probabilite d'immunisation: ");
-    scanf("%d",&pgamma);
+    scanf("%f",&pgamma);*/
+
+    afficherMatrice(listeEtat, taille);
     //void infection(plambda, pbeta, pgamma);
-
-
 
     return 0;
 }
