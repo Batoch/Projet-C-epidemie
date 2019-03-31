@@ -6,6 +6,7 @@
 
 
 void creerGraph(int taille){
+    int poids = 0;
     FILE *fp;
     fp = fopen("graph.txt", "w");
     fprintf(fp, "%d\n", taille*taille);                                 //nombre de sommets
@@ -29,20 +30,16 @@ void creerGraph(int taille){
 
 
         if(voisin[0]!=0){
-            fprintf(fp, "%d ", i);
-            fprintf(fp, "%d\n", voisin[0]);
+            fprintf(fp, "%d %d %d\n", i, voisin[0], poids);
         }
         if(voisin[1]!=0){
-            fprintf(fp, "%d ", i);
-            fprintf(fp, "%d\n", voisin[1]);
+            fprintf(fp, "%d %d %d\n", i, voisin[1], poids);
         }
         if(voisin[2]!=0){
-            fprintf(fp, "%d ", i);
-            fprintf(fp, "%d\n", voisin[2]);
+            fprintf(fp, "%d %d %d\n", i, voisin[2], poids);
         }
         if(voisin[3]!=0){
-            fprintf(fp, "%d ", i);
-            fprintf(fp, "%d\n", voisin[3]);
+            fprintf(fp, "%d %d %d\n", i, voisin[3], poids);
         }
     }
     fclose(fp);
