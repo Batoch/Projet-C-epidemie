@@ -55,6 +55,7 @@ void statisaiques(enum eType* listeEtats, int taille, float stats[]){
         }
     }
 
+    fprintf(fp, "Statistiques de la simulation: \n\n");
     fprintf(fp, "Nombre de sujets: %d\n", sujets);
     fprintf(fp, "Nombre de morts: %d (%d%)\n", morts, morts*100/sujets);
     fprintf(fp, "Nombre de malades: %d (%d%)\n", malades, malades*100/sujets);
