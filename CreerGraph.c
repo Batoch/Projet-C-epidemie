@@ -44,7 +44,6 @@ void creerGraph(int taille){
             fprintf(fp, "%d ", i);
             fprintf(fp, "%d\n", voisin[3]);
         }
-        fprintf(fp, "\n");
     }
     fclose(fp);
     //return 0;
