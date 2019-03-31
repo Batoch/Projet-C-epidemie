@@ -55,17 +55,16 @@ void affichage_graphe(Graphe* G)
 }
 
 
-void infection(float plambda, float pbeta, float pgamma, int taille){
+void infection(float plambda, float pbeta, float pgamma, int taille, enum eType* listeEtats, Graphe* populationMatrice){
 	srand(time(NULL)); // initialisation de rand
 	int index = rand()%(taille*taille); // choisir un malade au hasard
-
-
+	listeEtats[index] = malade;
 }
 
 void afficherMatrice(enum eType* listeEtats, int taille){
     for (int i=0; i< taille; i++){
         for (int j=0; j<taille; j++){
-            switch(listeEtats[i+j]) {
+            switch(listeEtats[taille*i+j]) {
                 case sain:
                     printf(".");
                     break;
@@ -85,4 +84,5 @@ void afficherMatrice(enum eType* listeEtats, int taille){
         }
         printf("\n");
     }
+    printf("\n");
 }

@@ -18,23 +18,25 @@ int main()
     lireGraphe(&populationMatrice, "C:\\Users\\makhl\\Desktop\\testClion\\cmake-build-debug\\graph.txt");
 
     // Toute la population est initialemnt saine
-    enum eType listeEtat[MAX_ETATS]; // nous n'avons pas compris pourquoi mais on ne peut pas mettre de variable en paramètre de taille du tableau
+    enum eType listeEtats[MAX_ETATS]; // nous n'avons pas compris pourquoi mais on ne peut pas mettre de variable en paramètre de taille du tableau
     for (int i=0; i<taille*taille; i++){
-        listeEtat[i] = sain;
+        listeEtats[i] = sain;
     }
 
     // On infecte une cell au hasard
-    printf("//******** INFECTIONATOR V2.0 ********\\\\\n\n");/*
+    printf("//******** INFECTIONATOR V2.0 ********\\\\\n\n");
     printf("-={parametres d'infection}=-\nchances d'infection: ");
     float plambda; float pbeta; float pgamma;
     scanf("%f",&plambda);
     printf("dangerosite de l'infection: ");
     scanf("%f",&pbeta);
     printf("probabilite d'immunisation: ");
-    scanf("%f",&pgamma);*/
+    scanf("%f",&pgamma);
 
-    afficherMatrice(listeEtat, taille);
-    //void infection(plambda, pbeta, pgamma);
+    afficherMatrice(listeEtats, taille);
+    infection(plambda, pbeta, pgamma, taille, &listeEtats, &populationMatrice);
+    listeEtats[5] = malade;
+    afficherMatrice(listeEtats, taille);
 
     return 0;
 }
