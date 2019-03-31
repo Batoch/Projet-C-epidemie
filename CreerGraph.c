@@ -14,16 +14,16 @@ void creerGraph(int taille){
     for (int i = 1; i <= taille*taille; ++i) {                                 //i represente la i eme cell du graph
         int voisin[4] = {i-taille, i+1, i+taille, i-1};                 //indice du voisin: haut, droite, bas, gauche
 
-        if(i<taille){
-            voisin[0]=0;                                                //Si la ieme cell fait parti de la premiere ligne, alors elle n'a pas de voisin en haut
+        if(i<=taille){                                                  //Si la ieme cell fait parti de la premiere ligne, alors elle n'a pas de voisin en haut
+            voisin[0]=0;
         }
-        if(i>taille*taille-taille){                                     //Si la ieme cell est sur la derniere ligne
+        if(i>=taille*taille-taille){                                    //Si la ieme cell est sur la derniere ligne
             voisin[2]=0;
         }
-        if(i%(taille)==0){                                                //Si sur la colonne de droite
+        if(i%(taille)==0){                                              //Si sur la colonne de droite
             voisin[1]=0;
         }
-        if(i%(taille+1)==0){                                            //Si sur la colonne de gauche
+        if(i%(taille)==1){                                            //Si sur la colonne de gauche
             voisin[3]=0;
         }
 
@@ -43,6 +43,4 @@ void creerGraph(int taille){
         }
     }
     fclose(fp);
-    //return 0;
-
 }
