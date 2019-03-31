@@ -4,10 +4,9 @@
 
 #include "affichage.h"
 
-
 void afficherMatrice(enum eType* listeEtats, int taille){
-    for (int i=0; i< taille; i++){
-        for (int j=0; j<taille; j++){
+    for (int i = 0; i< taille; i++){
+        for (int j = 1; j<taille + 1; j++){
             switch(listeEtats[taille*i+j]) {
                 case sain:
                     printf(".");

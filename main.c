@@ -20,7 +20,7 @@ int main()
 
     // Toute la population est initialemnt saine
     enum eType listeEtats[MAX_ETATS]; // nous n'avons pas compris pourquoi mais on ne peut pas mettre de variable en paramètre de taille du tableau
-    for (int i=0; i<taille*taille; i++){
+    for (int i = 1; i<taille*taille + 1; i++){
         listeEtats[i] = sain;
     }
 
@@ -39,10 +39,7 @@ int main()
     afficherMatrice(listeEtats, taille);
     forward(&populationMatrice,&listeEtats,taille, plambda, pbeta, pgamma);
     afficherMatrice(listeEtats, taille);
-    forward(&populationMatrice,&listeEtats,taille, plambda, pbeta, pgamma);
-    afficherMatrice(listeEtats, taille);
-    forward(&populationMatrice,&listeEtats,taille, plambda, pbeta, pgamma);
-    afficherMatrice(listeEtats, taille);
+
 
     return 0;
 }
