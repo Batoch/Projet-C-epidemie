@@ -10,7 +10,7 @@ void creerGraph(int taille){
     FILE *fp;
     fp = fopen("graph.txt", "w");
     fprintf(fp, "%d\n", taille*taille);                                 //nombre de sommets
-    fprintf(fp, "%d\n", 2 * taille * taille - 2 * (taille - 1));        //nombre d'arcs
+    fprintf(fp, "%d\n", 4*2 + 3*(taille-2)*4 + (taille-2)*(taille-2)*4);        //nombre d'arcs
     for (int i = 1; i <= taille*taille; ++i) {                                 //i represente la i eme cell du graph
         int voisin[4] = {i-taille, i+1, i+taille, i-1};                 //indice du voisin: haut, droite, bas, gauche
 
