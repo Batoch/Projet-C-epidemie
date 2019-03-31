@@ -30,3 +30,4 @@ void afficherMatrice(enum eType* listeEtats, int taille){
     }
     printf("\n");
 }
+
