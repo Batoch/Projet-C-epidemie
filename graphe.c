@@ -55,7 +55,7 @@ void affichage_graphe(Graphe* G)
 }
 
 
-void infection(float plambda, float pbeta, float pgamma, int taille, enum eType* listeEtats, Graphe* populationMatrice){
+void infection(int taille, enum eType* listeEtats){
 	srand(time(NULL)); // initialisation de rand
 	int index = rand()%(taille*taille); // choisir un malade au hasard
 	listeEtats[index] = malade;
@@ -85,4 +85,26 @@ void afficherMatrice(enum eType* listeEtats, int taille){
         printf("\n");
     }
     printf("\n");
+}
+
+void forward(Graphe* populationMatrice, enum eType* listeEtats, int taille, float plambda, float pbeta, float pgamma){
+    cell* nouveau = malloc(sizeof(cell*));
+    for(int i=0; i< taille*taille; i++){
+        if (listeEtats[i] == sain) {
+            float pmalade = 0;
+            nouveau = populationMatrice->successeurs[i];
+            while (nouveau != NULL) {
+                pmalade += plambda*(listeEtats[nouveau->val]==malade);
+                nouveau = nouveau->suivant;
+            }
+            if (pmalade> 1.0*rand()/RAND_MAX)
+                {listeEtats[i] = malade;}
+        }
+        else if (listeEtats[i] == malade){
+            if (pbeta > 1.0*rand()/RAND_MAX)
+                {listeEtats[i] = mort;}
+            else if (pgamma > 1.0*rand()/RAND_MAX)
+                {listeEtats[i] = immunise;}
+        }
+    }
 }

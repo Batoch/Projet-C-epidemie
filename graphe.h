@@ -20,6 +20,7 @@ void test();
 void lireGraphe(Graphe* graphe, const char* grapheFileName); // creation du graphe a partir du fichier
 void affichage_graphe(Graphe* graphe);  // affichage du graphe pour la matrice caree
 void afficherMatrice(enum eType* listeEtats, int taille);
-void infection(float plambda, float pbeta, float pgamma, int taille, enum eType* listeEtats, Graphe* populationMatrice);
+void infection(int taille, enum eType* listeEtats);
+void forward(Graphe* populationMatrice, enum eType* listeEtats, int taille, float plambda, float pbeta, float pgamma);
 
 #endif //PROJET_C_EPIDEMIE_GRAPHE_H

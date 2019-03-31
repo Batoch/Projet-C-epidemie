@@ -34,8 +34,13 @@ int main()
     scanf("%f",&pgamma);
 
     afficherMatrice(listeEtats, taille);
-    infection(plambda, pbeta, pgamma, taille, &listeEtats, &populationMatrice);
-    listeEtats[5] = malade;
+    infection(taille, &listeEtats);
+    afficherMatrice(listeEtats, taille);
+    forward(&populationMatrice,&listeEtats,taille, plambda, pbeta, pgamma);
+    afficherMatrice(listeEtats, taille);
+    forward(&populationMatrice,&listeEtats,taille, plambda, pbeta, pgamma);
+    afficherMatrice(listeEtats, taille);
+    forward(&populationMatrice,&listeEtats,taille, plambda, pbeta, pgamma);
     afficherMatrice(listeEtats, taille);
 
     return 0;
