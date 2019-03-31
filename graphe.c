@@ -1,8 +1,5 @@
 #include "graphe.h"
 
-void test(){
-	printf("ca marche...");
-}
 
 void lireGraphe(Graphe* G, const char* grapheFileName)
 {

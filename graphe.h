@@ -16,7 +16,6 @@ typedef struct
     cell** successeurs;
 } Graphe;
 
-void test();
 void lireGraphe(Graphe* graphe, const char* grapheFileName); // creation du graphe a partir du fichier
 void affichage_graphe(Graphe* graphe);  // affichage du graphe pour la matrice caree
 void infection(int taille, enum eType* listeEtats);
