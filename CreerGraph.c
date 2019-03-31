@@ -26,19 +26,23 @@ void creerGraph(int taille){
             voisin[3]=0;
         }
 
-        fprintf(fp, "%d ", i);
+
 
         if(voisin[0]!=0){
-            fprintf(fp, "%d ", voisin[0]);
+            fprintf(fp, "%d ", i);
+            fprintf(fp, "%d\n", voisin[0]);
         }
         if(voisin[1]!=0){
-            fprintf(fp, "%d ", voisin[1]);
+            fprintf(fp, "%d ", i);
+            fprintf(fp, "%d\n", voisin[1]);
         }
         if(voisin[2]!=0){
-            fprintf(fp, "%d ", voisin[2]);
+            fprintf(fp, "%d ", i);
+            fprintf(fp, "%d\n", voisin[2]);
         }
         if(voisin[3]!=0){
-            fprintf(fp, "%d ", voisin[3]);
+            fprintf(fp, "%d ", i);
+            fprintf(fp, "%d\n", voisin[3]);
         }
         fprintf(fp, "\n");
     }

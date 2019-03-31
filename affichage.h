@@ -8,5 +8,6 @@
 #include "pFile.h"
 
 void afficherMatrice(enum eType* listeEtats, int taille);
+void statisaiques(enum eType* listeEtats, int taille, float stats[]);
 
 #endif //PROJET_C_EPIDEMIE_AFFICHAGE_H
