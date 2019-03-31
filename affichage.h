@@ -5,6 +5,8 @@
 #ifndef PROJET_C_EPIDEMIE_AFFICHAGE_H
 #define PROJET_C_EPIDEMIE_AFFICHAGE_H
 
+#include "pFile.h"
+
 void afficherMatrice(enum eType* listeEtats, int taille);
 
 #endif //PROJET_C_EPIDEMIE_AFFICHAGE_H
