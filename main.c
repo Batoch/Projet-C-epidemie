@@ -3,6 +3,7 @@
 #include "CreerGraph.h"
 #include "graphe.h"
 #include "pFile.h"
+#include "affichage.h"
 
 #define MAX_ETATS 1000
 
