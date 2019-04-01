@@ -37,6 +37,7 @@ int main()
     afficherMatrice(listeEtats, taille);
     infection(taille, &listeEtats);
     afficherMatrice(listeEtats, taille);
+
     for (int i=0; i< 10; i++) {
         forward(&populationMatrice, &listeEtats, taille, plambda, pbeta, pgamma);
         afficherMatrice(listeEtats, taille);

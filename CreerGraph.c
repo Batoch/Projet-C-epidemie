@@ -23,7 +23,7 @@ void creerGraph(int taille){
         if(i%(taille)==0){                                              //Si sur la colonne de droite
             voisin[1]=0;
         }
-        if(i%(taille)==1){                                            //Si sur la colonne de gauche
+        if(i%(taille)==1){                                              //Si sur la colonne de gauche
             voisin[3]=0;
         }
 
