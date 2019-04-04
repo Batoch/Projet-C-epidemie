@@ -57,6 +57,7 @@ void affichage_graphe(Graphe* G)
 void infection(int taille, enum eType* listeEtats){
 	srand(time(NULL)); // initialisation de rand
 	int index = rand()%(taille*taille); // choisir un malade au hasard
+    //int index = rand()%(10000);
 	listeEtats[index] = malade;
 }
 
