@@ -63,7 +63,7 @@ void infection(int taille, enum eType* listeEtats){
 
 
 void forward(Graphe* populationMatrice, enum eType* listeEtats, int taille, float plambda, float pbeta, float pgamma){
-    enum eType listeTemp[MAX_ETATS]; // on fait une copie pour ne pas utiliser le graphe que l'on construit dans nos tests
+    enum eType listeTemp[taille*taille]; // on fait une copie pour ne pas utiliser le graphe que l'on construit dans nos tests
     for(int i = 1; i< taille*taille + 1;i++){
         listeTemp[i] = listeEtats[i];
     }

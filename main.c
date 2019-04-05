@@ -16,7 +16,7 @@ int main()
 
     Graphe populationMatrice;
     creerGraph(taille);
-    lireGraphe(&populationMatrice, "C:\\Users\\Baptiste\\CLionProjects\\Projet-C-epidemie\\cmake-build-debug\\graph.txt");
+    lireGraphe(&populationMatrice, "cmake-build-debug/graph.txt");
     //lireGraphe(&populationMatrice, "C:\\Users\\makhl\\Desktop\\testClion\\cmake-build-debug\\graph.txt");
 
     // Toute la population est initialemnt saine
@@ -43,9 +43,9 @@ int main()
     printf("appuyer sur entrer pour faire avancer la simulation");
 
     for (int i=0; i< 10; i++) {
+        getchar();
         forward(&populationMatrice, &listeEtats, taille, plambda, pbeta, pgamma);
         afficherMatrice(listeEtats, taille);
-        getchar();
     }
 
 
