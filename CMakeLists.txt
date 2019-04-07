@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.1)
 project(Projet_C_epidemie C)
 
 set(CMAKE_C_STANDARD 11)

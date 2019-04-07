@@ -15,10 +15,10 @@ void lireGraphe(Graphe* G, const char* grapheFileName)
 		G->nb_sommets 	= nb_sommets;
 		G->successeurs	= (cell**)malloc(nb_sommets * sizeof(cell*));
 
-		for (int i = 1; i < nb_sommets +1; i++)
+		for (int i = 0; i < nb_sommets; i++)
 			G->successeurs[i]	= NULL;
 
-		for (int i = 1; i < nb_arcs +1; i++)
+		for (int i = 0; i < nb_arcs; i++)
 		{
 			fscanf(fp, "%d %d %d", &u, &v, &w);
 			//u--; // decrement pour gerer le decalage entre le numeros des sommets dans le fichiers et les index dans les tableaux
@@ -42,11 +42,11 @@ void affichage_graphe(Graphe* G)
 
 	for(int i = 0; i < G->nb_sommets; i++) 
 	{
-		printf("Sommet %d : ", i+1);
+		printf("Sommet %d : ", i);
 		courant = G->successeurs[i];
 		while(courant != NULL)
 		{
-			printf("%d, ", courant->val +1);
+			printf("%d, ", courant->val);
 			courant = courant->suivant;
 		} 
 		printf("\n");
@@ -57,18 +57,17 @@ void affichage_graphe(Graphe* G)
 void infection(int taille, enum eType* listeEtats){
 	srand(time(NULL)); // initialisation de rand
 	int index = rand()%(taille*taille); // choisir un malade au hasard
-    //int index = rand()%(10000);
 	listeEtats[index] = malade;
 }
 
 
 void forward(Graphe* populationMatrice, enum eType* listeEtats, int taille, float plambda, float pbeta, float pgamma){
     enum eType listeTemp[taille*taille]; // on fait une copie pour ne pas utiliser le graphe que l'on construit dans nos tests
-    for(int i = 1; i< taille*taille + 1;i++){
+    for(int i = 0; i< taille*taille ;i++){
         listeTemp[i] = listeEtats[i];
     }
     cell* nouveau = malloc(sizeof(cell*));
-    for(int i = 1; i< taille*taille + 1; i++){
+    for(int i = 0; i < taille*taille; i++){
         if (listeTemp[i] == sain) {
             float pmalade = 0;
             nouveau = populationMatrice->successeurs[i];
@@ -87,4 +86,11 @@ void forward(Graphe* populationMatrice, enum eType* listeEtats, int taille, floa
         }
     }
     free(nouveau);
+}
+
+void pause(int i){
+//Pause l'application pour i miliseconds:
+    clock_t start;
+    start=clock();
+    while(((clock())-start)<=i*CLOCKS_PER_SEC/1000);
 }

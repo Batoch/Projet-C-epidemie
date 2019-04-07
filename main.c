@@ -5,7 +5,6 @@
 #include "pFile.h"
 #include "affichage.h"
 
-#define MAX_ETATS 1000
 
 int main()
 {
@@ -20,8 +19,8 @@ int main()
     //lireGraphe(&populationMatrice, "C:\\Users\\makhl\\Desktop\\testClion\\cmake-build-debug\\graph.txt");
 
     // Toute la population est initialemnt saine
-    enum eType listeEtats[taille*taille]; // // nous n'avons pas compris pourquoi mais on ne peut pas mettre de variable en paramètre de taille du tableau
-    for (int i = 1; i<taille*taille + 1; i++){
+    enum eType listeEtats[taille*taille];
+    for (int i = 0; i<taille*taille; i++){
         listeEtats[i] = sain;
     }
 
@@ -37,13 +36,13 @@ int main()
     scanf("%f",&pgamma);
 
     afficherMatrice(listeEtats, taille);
-    infection(taille, &listeEtats);
+    infection(taille, (enum eType *) &listeEtats);
     afficherMatrice(listeEtats, taille);
 
-    printf("appuyer sur entrer pour faire avancer la simulation");
 
-    for (int i=0; i< 10; i++) {
-        getchar();
+    for (int i=0; i< 20; i++) {
+        printf("\e[1;1H\e[2J");     //clear console
+        pause(1000);
         forward(&populationMatrice, &listeEtats, taille, plambda, pbeta, pgamma);
         afficherMatrice(listeEtats, taille);
     }
